@@ -14,5 +14,10 @@
             Color = color;
             IsLocked = true;
         }
+
+        public Room GetOtherRoom(Room room)
+        {
+            return Room1 == room ? Room2 : Room1;
+        }
     }
 }

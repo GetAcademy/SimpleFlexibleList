@@ -14,7 +14,7 @@
         public void Add(Door door)
         {
             Doors.Add(door);
-            var otherRoom = door.Room1 == this ? door.Room2 : door.Room1;
+            var otherRoom = door.GetOtherRoom(this);
             otherRoom.Add(door);
         }
     }
