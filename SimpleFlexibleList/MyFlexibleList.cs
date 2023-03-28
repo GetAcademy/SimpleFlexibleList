@@ -1,34 +1,34 @@
 ﻿namespace SimpleFlexibleList
 {
-    internal class MyFlexibleList
+    internal class MyFlexibleList<T>
     {
-        private int[] _numbers;
+        private T[] _values;
         private int _count;
 
         public string AsString => 
-            $"Count={_count} Numbers={string.Join(',', _numbers)}";
+            $"Count={_count} Values={string.Join(',', _values)}";
 
         public MyFlexibleList()
         {
-            _numbers = new int[4];
+            _values = new T[4];
         }
 
-        public void Add(int number)
+        public void Add(T value)
         {
             var index = _count;
-            if (index >= _numbers.Length)
+            if (index >= _values.Length)
             {
                 IncreaseCapacity();
             }
-            _numbers[index] = number;
+            _values[index] = value;
             _count++;
         }
 
         private void IncreaseCapacity()
         {
-            var newNumbers = new int[_numbers.Length * 2];
-            Array.Copy(_numbers, newNumbers, _numbers.Length);
-            _numbers = newNumbers;
+            var newValues = new T[_values.Length * 2];
+            Array.Copy(_values, newValues, _values.Length);
+            _values = newValues;
         }
     }
 }

@@ -7,14 +7,31 @@
  * Litt generics
  */
 
-var numbers = new MyFlexibleList();
-while (true)
-{
-    var numberStr = Console.ReadLine();
-    var number = Convert.ToInt32(numberStr);
-    numbers.Add(number);
-    Console.WriteLine(numbers.AsString);
-}
+//var numbers = new List<int>();
+//while (true)
+//{
+//    var numberStr = Console.ReadLine();
+//    var number = Convert.ToInt32(numberStr);
+//    numbers.Add(number);
+//    Console.WriteLine(string.Join(',',numbers));
+//}
+
+//var numbers = new MyFlexibleList<int>();
+//while (true)
+//{
+//    var numberStr = Console.ReadLine();
+//    var number = Convert.ToInt32(numberStr);
+//    numbers.Add(number);
+//    Console.WriteLine(numbers.AsString);
+//}
+
+//var texts = new MyFlexibleList<string>();
+//while (true)
+//{
+//    var text = Console.ReadLine();
+//    texts.Add(text);
+//    Console.WriteLine(texts.AsString);
+//}
 
 /*
 var numbers = new int[4];
