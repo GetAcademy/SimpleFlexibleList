@@ -1,4 +1,5 @@
 ﻿using SimpleFlexibleList;
+using SimpleFlexibleList.Game;
 
 /*
  * Nytt eksempel på OO og klasser
@@ -6,7 +7,8 @@
  * Forstå List
  * Litt generics
  */
-
+var game = new Game();
+game.Run();
 //var numbers = new List<int>();
 //while (true)
 //{
